@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Building with Docker
+
+For all functionality you will also need to be running the backend application.
+
+To build the docker image, run the following commands:
+docker build -t sight-singing-frontend:lts -f Dockerfile .
+
+Once the image has been built you can run it with the following commands:
+docker run -d -p 8088:8003 --name sight-singing-frontend sight-singing-frontend:lts
+
+To view hit the API for the backend on your local environment:
+localhost:8088
